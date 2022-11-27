@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
             const div = document.getElementById("container");
 
 
-            //TODO: push out each Astronaut to the screen
+            //TODO: push out each Astronaut to the webpage.
             for (let i = 0; i < response.length; i++) {
                 console.log(response[i]);
                 // NOTES: the + on line 15 adds multiple astronauts to the document.The = only add one iteration of the response[i]
