@@ -1,12 +1,8 @@
 // TODO: add code here
 window.addEventListener("load", function () {
-    fetch("https://handlers.education.launchcode.org/static/astronauts.json")
-        .then(function (response) {
-            return response.json();
-        }).then(function (response) {
-
+    fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(function (response) {
+        response.json().then(function (response) {
             const div = document.getElementById("container");
-
 
             //TODO: push out each Astronaut to the webpage.
             for (let i = 0; i < response.length; i++) {
@@ -24,7 +20,8 @@ window.addEventListener("load", function () {
    </div>
    <img class="avatar" src="${response[i].picture}">
 </div>
-        `
+        `;
             }
-        })
+        });
+    });
 });
